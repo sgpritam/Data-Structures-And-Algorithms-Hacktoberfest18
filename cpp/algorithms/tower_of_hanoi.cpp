@@ -12,14 +12,15 @@ Source Rod is named as 'a', auxiliary rod as 'b' and destination rod as 'c'.
 using namespace std;
 
 void towerOfHanoi(int n, char source, char auxiliary, char destination) {
-
+// Base Case
   if(n == 0)
     return;
-  
+  // Recursive Case
+  // First step n-1 disks move fronm source to auxiliary
   towerOfHanoi(n-1, source, destination, auxiliary);
-  
+  // Shift Nth disk from source to destination
   cout<<source<<' '<<destination<<endl;
-  
+  // Move n-1 disk from auxiliary to destination
   towerOfHanoi(n-1, auxiliary, source, destination );
 
 }
